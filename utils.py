@@ -1,6 +1,6 @@
 import numpy as np
 import sys
-from os.path import join
+import os
 from matplotlib import pyplot
 
 sys.path.append('..')
@@ -20,7 +20,7 @@ def normalizeRatings(Y, R):
 
 
 def loadMovieList():
-    with open(join('data', 'movie_ids.txt'), encoding='ISO-8859-1') as fid:
+    with open(os.path.join('data', 'movie_ids.txt'), encoding='ISO-8859-1') as fid:
         movies = fid.readlines()
 
     movieNames = []
